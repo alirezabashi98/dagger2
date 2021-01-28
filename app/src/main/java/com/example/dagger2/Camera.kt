@@ -1,4 +1,6 @@
 package com.example.dagger2
 
-class Camera {
+import javax.inject.Inject
+
+class Camera @Inject constructor() {
 }

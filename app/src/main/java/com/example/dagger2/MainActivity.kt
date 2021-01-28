@@ -8,10 +8,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val mobile = Mobile(
-            Board(Storage(), Camera()),
-            Screen(Lcd(), Touch())
-        )
+        val component = DaggerMobileComponent.create()
+        val mobile = component.buildMobile().run()
 
     }
 }

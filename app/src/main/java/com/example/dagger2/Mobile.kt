@@ -1,11 +1,12 @@
 package com.example.dagger2
 
 import android.util.Log
+import javax.inject.Inject
 
-class Mobile(board: Board,screen: Screen) {
+class Mobile @Inject constructor(board: Board, screen: Screen) {
 
-    fun run(){
-        Log.i("TAG_TEST","create Mobile ... ")
+    fun run() {
+        Log.i("TAG_TEST", "create Mobile ... ")
     }
 
 }

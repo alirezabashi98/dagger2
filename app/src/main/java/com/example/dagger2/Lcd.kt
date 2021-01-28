@@ -1,4 +1,6 @@
 package com.example.dagger2
 
-class Lcd {
+import javax.inject.Inject
+
+class Lcd @Inject constructor() {
 }

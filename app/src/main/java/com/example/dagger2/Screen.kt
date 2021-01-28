@@ -1,4 +1,6 @@
 package com.example.dagger2
 
-class Screen(lcd: Lcd,touch: Touch) {
+import javax.inject.Inject
+
+class Screen @Inject constructor(lcd: Lcd,touch: Touch) {
 }

@@ -1,4 +1,6 @@
 package com.example.dagger2
 
-class Storage {
+import javax.inject.Inject
+
+class Storage @Inject constructor() {
 }

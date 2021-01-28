@@ -1,4 +1,6 @@
 package com.example.dagger2
 
-class Touch {
+import javax.inject.Inject
+
+class Touch @Inject constructor() {
 }
