@@ -1,5 +1,6 @@
 package com.example.dagger2
 
+import dagger.Binds
 import dagger.Component
 
 @Component

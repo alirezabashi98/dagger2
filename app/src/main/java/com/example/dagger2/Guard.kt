@@ -1,8 +1,9 @@
 package com.example.dagger2
 
 import android.util.Log
+import javax.inject.Inject
 
-class Guard {
+class Guard @Inject constructor(){
 
     fun setGuardForMobile(mobile: Mobile){
 

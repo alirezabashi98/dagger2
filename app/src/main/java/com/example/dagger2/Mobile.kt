@@ -1,6 +1,7 @@
 package com.example.dagger2
 
 import android.util.Log
+import dagger.Binds
 import javax.inject.Inject
 
 class Mobile @Inject constructor(board: Board, screen: Screen) {
