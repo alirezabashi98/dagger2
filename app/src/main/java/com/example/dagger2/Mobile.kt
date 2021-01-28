@@ -9,4 +9,11 @@ class Mobile @Inject constructor(board: Board, screen: Screen) {
         Log.i("TAG_TEST", "create Mobile ... ")
     }
 
+    @Inject
+    fun setGuard(guard: Guard) {
+
+        guard.setGuardForMobile(this)
+
+    }
+
 }
