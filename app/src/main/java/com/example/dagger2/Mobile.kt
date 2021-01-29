@@ -4,10 +4,11 @@ import android.util.Log
 import dagger.Binds
 import javax.inject.Inject
 
-class Mobile @Inject constructor(board: Board, screen: Screen) {
+class Mobile @Inject constructor(val board: Board,val screen: Screen) {
 
     fun run() {
-        Log.i("TAG_TEST", "create Mobile ... ")
+        Log.i("TAG_TEST", "Create Mobile ... ")
+        screen.run()
     }
 
     @Inject

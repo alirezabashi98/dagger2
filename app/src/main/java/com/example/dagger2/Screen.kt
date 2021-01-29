@@ -1,6 +1,8 @@
 package com.example.dagger2
 
-import javax.inject.Inject
+import android.util.Log
 
-class Screen @Inject constructor(lcd: Lcd,touch: Touch) {
+interface Screen {
+
+    fun run()
 }
