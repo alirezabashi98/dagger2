@@ -6,8 +6,6 @@ import dagger.Provides
 @Module
 abstract class BoardModule {
 
-//    companion object {
-
     @Provides
     fun buildCamera(): Camera = Camera()
 
@@ -17,5 +15,4 @@ abstract class BoardModule {
     @Provides
     fun buildBoard(camera: Camera, storage: Storage): Board = Board(storage, camera)
 
-//    }
 }
