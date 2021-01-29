@@ -1,9 +1,8 @@
 package com.example.dagger2
 
-import dagger.Binds
 import dagger.Component
 
-@Component
+@Component(modules = [BoardModule::class])
 interface MobileComponent {
 
     fun buildMobile(): Mobile
