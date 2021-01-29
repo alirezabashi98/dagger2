@@ -1,12 +1,12 @@
 package com.example.dagger2
 
-import dagger.Binds
 import dagger.Module
+import dagger.Provides
 
 @Module
-abstract class NotFPScreenModule {
+class NotFPScreenModule(val dpi: Int) {
 
-    @Binds
-    abstract fun buildNotFPScreen(notFPScreen: NotFPScreen): Screen
+    @Provides
+    fun buildNotFPScreen(): Screen = NotFPScreen(dpi)
 
 }

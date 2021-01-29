@@ -13,7 +13,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val component = DaggerMobileComponent.create()
+        val component = DaggerMobileComponent.builder().notFPScreenModule(NotFPScreenModule(370)).build()
         component.injectField(this)
         mobile.run()
 

@@ -1,12 +1,11 @@
 package com.example.dagger2
 
 import android.util.Log
-import javax.inject.Inject
 
-class NotFPScreen @Inject constructor() : Screen {
+class NotFPScreen(val dpi: Int) : Screen {
 
     override fun run() {
-        Log.i("TAG_TEST", "Create NotFPScreen ... ")
+        Log.i("TAG_TEST", "Create NotFPScreen ... & value dpi : $dpi ")
     }
 
 }

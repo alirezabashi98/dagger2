@@ -2,7 +2,7 @@ package com.example.dagger2
 
 import dagger.Component
 
-@Component(modules = [BoardModule::class, FPScreenModule::class])
+@Component(modules = [BoardModule::class, NotFPScreenModule::class])
 interface MobileComponent {
 
     fun buildMobile(): Mobile
