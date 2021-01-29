@@ -1,6 +1,13 @@
 package com.example.dagger2
 
-import javax.inject.Inject
+import android.util.Log
 
-class Camera{
+class Camera {
+
+    init {
+
+        Log.i("TAG_TEST", "Create Camera ...")
+
+    }
+
 }
