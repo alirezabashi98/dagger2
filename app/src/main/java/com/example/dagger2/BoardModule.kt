@@ -4,7 +4,7 @@ import dagger.Module
 import dagger.Provides
 
 @Module
-abstract class BoardModule {
+class BoardModule {
 
     @Provides
     fun buildCamera(): Camera = Camera()
