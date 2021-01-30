@@ -15,10 +15,10 @@ interface MobileComponent {
     interface Builder {
 
         @BindsInstance
-        fun buildDpi(@Named("Dpi")dpi: Int): Builder
+        fun buildDpi(@Dpi dpi: Int): Builder
 
         @BindsInstance
-        fun buildGorillaGlass(@Named("GorillaGlass")gorillaGlass: Int): Builder
+        fun buildGorillaGlass(@GorillaGlass gorillaGlass: Int): Builder
 
         fun build(): MobileComponent
 

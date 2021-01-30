@@ -4,7 +4,7 @@ import android.util.Log
 import javax.inject.Inject
 import javax.inject.Named
 
-class FPScreen @Inject constructor(@Named("Dpi")val dpi: Int,@Named("GorillaGlass") val gorillaGlass: Int) : Screen {
+class FPScreen @Inject constructor(@Dpi val dpi: Int,@GorillaGlass val gorillaGlass: Int) : Screen {
 
 
     override fun run() {
