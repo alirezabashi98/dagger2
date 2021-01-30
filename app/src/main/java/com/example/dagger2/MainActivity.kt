@@ -13,7 +13,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val component = DaggerMobileComponent.builder().buildDpi(370).build()
+        val component = DaggerMobileComponent.builder().buildDpi(370).buildGorillaGlass(4).build()
         component.injectField(this)
         mobile.run()
 
