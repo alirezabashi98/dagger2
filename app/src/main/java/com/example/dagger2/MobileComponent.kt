@@ -2,7 +2,6 @@ package com.example.dagger2
 
 import dagger.BindsInstance
 import dagger.Component
-import javax.inject.Named
 import javax.inject.Singleton
 
 @Singleton
@@ -13,16 +12,14 @@ interface MobileComponent {
 
     fun injectField(mainActivity: MainActivity)
 
-    @Component.Builder
-    interface Builder {
+    @Component.Factory
+    interface Factory {
 
-        @BindsInstance
-        fun buildDpi(@Dpi dpi: Int): Builder
 
-        @BindsInstance
-        fun buildGorillaGlass(@GorillaGlass gorillaGlass: Int): Builder
-
-        fun build(): MobileComponent
+        fun create(
+            @BindsInstance @Dpi dpi: Int,
+            @BindsInstance @GorillaGlass gorillaGlass: Int
+        ): MobileComponent
 
     }
 
