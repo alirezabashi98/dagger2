@@ -1,8 +1,11 @@
 package com.example.dagger2
 
 import android.util.Log
+import javax.inject.Inject
+import javax.inject.Singleton
 
-class Camera {
+@Singleton
+class Camera @Inject constructor() {
 
     init {
 

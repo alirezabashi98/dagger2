@@ -3,7 +3,9 @@ package com.example.dagger2
 import dagger.BindsInstance
 import dagger.Component
 import javax.inject.Named
+import javax.inject.Singleton
 
+@Singleton
 @Component(modules = [BoardModule::class, FPScreenModule::class])
 interface MobileComponent {
 
