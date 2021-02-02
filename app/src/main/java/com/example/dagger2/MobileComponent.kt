@@ -12,14 +12,16 @@ interface MobileComponent {
 
     fun injectField(mainActivity: MainActivity)
 
-    @Component.Factory
-    interface Factory {
+    @Component.Builder
+    interface Builder {
 
+        @BindsInstance
+        fun buildDpi(@Dpi dpi: Int): Builder
 
-        fun create(
-            @BindsInstance @Dpi dpi: Int,
-            @BindsInstance @GorillaGlass gorillaGlass: Int
-        ): MobileComponent
+        @BindsInstance
+        fun buildGorillaGlass(@GorillaGlass gorillaGlass: Int): Builder
+
+        fun build(): MobileComponent
 
     }
 
