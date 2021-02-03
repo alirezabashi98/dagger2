@@ -4,7 +4,7 @@ import android.util.Log
 import javax.inject.Inject
 import javax.inject.Singleton
 
-@Singleton
+@ActivityScope
 class Camera @Inject constructor() {
 
     init {

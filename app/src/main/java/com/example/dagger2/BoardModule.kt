@@ -11,10 +11,6 @@ class BoardModule {
 //    @Provides
 //    fun buildCamera(): Camera = Camera()
 
-    @Singleton
-    @Provides
-    fun buildStorage(): Storage = Storage()
-
     @Provides
     fun buildBoard(camera: Camera, storage: Storage): Board {
 

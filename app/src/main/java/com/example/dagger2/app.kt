@@ -4,15 +4,15 @@ import android.app.Application
 
 class app : Application() {
 
-    private lateinit var component: MobileComponent
+    private lateinit var component: StorageComponent
 
     override fun onCreate() {
         super.onCreate()
 
-        component = DaggerMobileComponent.builder().buildDpi(370).buildGorillaGlass(4).build()
+        component = DaggerStorageComponent.create()
 
     }
 
-    fun getDataComponent(): MobileComponent = component
+    fun getDataComponent(): StorageComponent = component
 
 }

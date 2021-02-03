@@ -4,8 +4,11 @@ import dagger.BindsInstance
 import dagger.Component
 import javax.inject.Singleton
 
-@Singleton
-@Component(modules = [BoardModule::class, FPScreenModule::class])
+@ActivityScope
+@Component(
+    dependencies = [StorageComponent::class],
+    modules = [BoardModule::class, FPScreenModule::class]
+)
 interface MobileComponent {
 
     fun buildMobile(): Mobile
@@ -20,6 +23,8 @@ interface MobileComponent {
 
         @BindsInstance
         fun buildGorillaGlass(@GorillaGlass gorillaGlass: Int): Builder
+
+        fun buildStorageComponent(storageComponent: StorageComponent): Builder
 
         fun build(): MobileComponent
 
