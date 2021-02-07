@@ -45,6 +45,8 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 
     // Dagger
+    // https://developer.android.com/training/dependency-injection/dagger-android
+    // https://github.com/google/dagger/releases/
     implementation 'com.google.dagger:dagger:2.31.2'
     kapt 'com.google.dagger:dagger-compiler:2.31.2'
 
