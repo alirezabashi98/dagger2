@@ -5,13 +5,11 @@ import android.widget.Toast
 import dagger.Module
 import dagger.Provides
 
-@Module(includes = [ContextModule::class])
+@Module()
 class NotFPScreenModule(val dpi: Int) {
 
     @Provides
-    fun buildNotFPScreen(context: Context): Screen {
-
-        Toast.makeText(context,"getContext",Toast.LENGTH_SHORT).show()
+    fun buildNotFPScreen(): Screen {
 
         return NotFPScreen(dpi)
     }

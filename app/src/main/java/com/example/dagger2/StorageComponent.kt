@@ -7,6 +7,6 @@ import javax.inject.Singleton
 @Component(modules = [StorageModule::class])
 interface StorageComponent {
 
-    fun buildStorage(): Storage
+    fun getMobileComponentBuilder(): MobileComponent.Builder
 
 }

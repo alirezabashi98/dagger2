@@ -1,12 +1,10 @@
 package com.example.dagger2
 
 import dagger.BindsInstance
-import dagger.Component
-import javax.inject.Singleton
+import dagger.Subcomponent
 
 @ActivityScope
-@Component(
-    dependencies = [StorageComponent::class],
+@Subcomponent(
     modules = [BoardModule::class, FPScreenModule::class]
 )
 interface MobileComponent {
@@ -15,7 +13,7 @@ interface MobileComponent {
 
     fun injectField(mainActivity: MainActivity)
 
-    @Component.Builder
+    @Subcomponent.Builder
     interface Builder {
 
         @BindsInstance
@@ -23,8 +21,6 @@ interface MobileComponent {
 
         @BindsInstance
         fun buildGorillaGlass(@GorillaGlass gorillaGlass: Int): Builder
-
-        fun buildStorageComponent(storageComponent: StorageComponent): Builder
 
         fun build(): MobileComponent
 
